@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import Checkbox from "./checkbox";
 
 export default function App() {
-  return <div>Start here</div>;
+  const [checked, setChecked] = useState(false);
+
+  return <Checkbox
+    checked={checked}
+    onChange={val => setChecked(val)}
+    label={"Count me in!"}
+  />;
 }
